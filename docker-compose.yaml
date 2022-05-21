@@ -1,0 +1,13 @@
+version: "3.0"
+
+services:
+  app:
+    image: openkbs/tensorflow-python3-jupyter:latest
+    ports: 
+      - 8888:8888
+      - 4040:4040
+    working_dir: /Drones
+    volumes:
+      - ./:/home/developer/notebooks
+      - ./spark/:/opt/spark-3.0.1-bin-hadoop2.7/conf
+      - ./startup/:/home/developer/scripts
